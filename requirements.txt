@@ -1,0 +1,43 @@
+# Core Orchestration
+langgraph>=0.2.0
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+
+# LLM Providers
+openai>=1.30.0                  # OpenAI API (primary)
+langchain-openai>=0.1.0         # LangChain OpenAI integration
+ollama>=0.2.0                   # Local Mistral/Llama fallback (optional)
+
+# Web Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.20.0
+playwright>=1.44.0
+httpx>=0.27.0
+fake-useragent>=1.5.0
+
+# NLP & Embeddings
+sentence-transformers>=3.0.0   # Free embeddings
+scikit-learn>=1.4.0
+nltk>=3.8.0
+spacy>=3.7.0
+
+# Resume Processing
+python-docx>=1.1.0
+PyPDF2>=3.0.0
+reportlab>=4.2.0
+
+# Tracking & Storage
+gspread>=6.0.0                 # Google Sheets API
+notion-client>=2.2.0           # Notion API
+pandas>=2.2.0
+openpyxl>=3.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.7.0
+rich>=13.7.0                   # Beautiful CLI output
+typer>=0.12.0
+schedule>=1.2.0
+loguru>=0.7.0
