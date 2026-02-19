@@ -77,25 +77,38 @@ EXPERIENCE_LEVELS = ["Internship", "Entry Level", "Fresher", "0-1 year"]
 CANDIDATE_SKILLS = {
     "languages": ["Python", "C++", "Java", "JavaScript", "HTML/CSS"],
     "frameworks": ["Flask", "Node.js", "React", "Streamlit", "PyTorch"],
-    "ml_frameworks": ["PyTorch", "Hugging Face", "scikit-learn"],
+    "ml_frameworks": ["PyTorch", "Hugging Face", "scikit-learn", "BERT", "LLaMA"],
     "genai": [
         "LangChain", "LangGraph", "RAG", "Text Embeddings",
         "Prompt Engineering", "LoRA", "QLoRA", "LLMs",
-        "Fine-tuning", "FAISS", "Chroma",
+        "Fine-tuning", "FAISS", "Chroma", "Vector Databases",
+        "OpenAI API", "GPT-4o", "GPT-4o-mini",
     ],
-    "llms": ["LLaMA", "GPT-OSS", "Groq Cloud", "Whisper", "gTTS", "Gradio"],
     "agentic": [
-        "LangGraph", "LangChain", "Multi-agent Systems",
+        "LangGraph", "LangChain", "Multi-Agent Systems",
         "Autonomous Agents", "Tool Calling", "Multi-step Reasoning",
+        "Agent Orchestration", "State Machines", "6-node Pipeline",
     ],
     "mlops": [
         "DVC", "Dagster", "Astronomer", "Apache Airflow",
         "AWS", "S3", "EC2", "SageMaker", "Docker",
         "MLflow", "CI/CD Pipelines", "Model Versioning", "Data Pipelines",
     ],
+    "scraping": [
+        "BeautifulSoup", "Requests", "Selenium",
+        "LinkedIn Scraping", "Indeed Scraping", "Web Scraping",
+    ],
+    "apis": [
+        "Telegram Bot API", "Google Sheets API", "Notion API",
+        "OpenAI API", "REST APIs",
+    ],
     "databases": ["MySQL", "PostgreSQL", "MongoDB"],
     "data": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    "tools": ["Git", "GitHub", "Linux", "LeetCode"],
+    "tools": [
+        "Git", "GitHub", "Linux", "LeetCode",
+        "Groq Cloud", "Gradio", "Whisper", "gTTS",
+        "Sentence Transformers",
+    ],
 }
 
 # Flatten for matching

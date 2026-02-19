@@ -32,25 +32,69 @@ BASE_RESUME = {
         "github": "https://github.com/priyanshu-bhati",
         "portfolio": "",
         "location": "Kota, Rajasthan, India",
-        "available_from": "May 16, 2025",
+        "available_from": "May 2027",
     },
     "summary": (
         "Generative AI Engineer with hands-on experience in building multimodal AI systems, "
-        "fine-tuning Large Language Models, and developing Retrieval-Augmented Generation (RAG) pipelines. "
-        "Strong foundation in machine learning, deep learning, and agentic AI workflows using "
-        "LangChain and LangGraph. Passionate about building scalable, autonomous, and "
-        "production-ready AI systems. Available to join from May 16, 2025."
+        "fine-tuning Large Language Models, developing RAG pipelines, and autonomous multi-agent systems. "
+        "Strong foundation in machine learning, deep learning, agentic AI workflows using "
+        "LangChain and LangGraph, and MLOps tools including DVC, Dagster, and Airflow. "
+        "Passionate about building scalable, autonomous, and production-ready AI systems."
     ),
     "technical_skills": {
-        "Languages & Frameworks": ["Python", "C++", "Java", "JavaScript", "HTML/CSS", "Flask", "Node.js", "React", "Streamlit", "PyTorch"],
-        "Generative AI & NLP": ["LLMs", "Prompt Engineering", "RAG", "Text Embeddings", "LangChain", "LangGraph", "Hugging Face", "LoRA", "QLoRA"],
-        "Machine Learning": ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "Transformer Architectures", "Fine-tuning"],
-        "MLOps & Data Engineering": ["DVC", "Dagster", "Astronomer", "Apache Airflow", "AWS (S3, EC2, SageMaker)", "Docker", "MLflow", "CI/CD Pipelines", "Model Versioning", "Data Pipelines"],
+        "Languages & Frameworks": [
+            "Python", "C++", "Java", "JavaScript", "HTML/CSS",
+            "Flask", "Node.js", "React", "Streamlit", "PyTorch",
+        ],
+        "Generative AI & NLP": [
+            "LLMs", "Prompt Engineering", "RAG", "Text Embeddings",
+            "LangChain", "LangGraph", "Hugging Face", "LoRA", "QLoRA",
+            "Fine-tuning", "Vector Databases", "FAISS", "Chroma",
+        ],
+        "Agentic AI": [
+            "LangGraph", "Multi-Agent Systems", "Autonomous Agents",
+            "Tool Calling", "Multi-step Reasoning", "Agent Orchestration",
+            "State Machines", "LangChain Tools",
+        ],
+        "Machine Learning": [
+            "Supervised Learning", "Unsupervised Learning", "Neural Networks",
+            "Transformer Architectures", "Fine-tuning", "BERT", "LLaMA",
+        ],
+        "MLOps & Data Engineering": [
+            "DVC", "Dagster", "Astronomer", "Apache Airflow",
+            "AWS (S3, EC2, SageMaker)", "Docker", "MLflow",
+            "CI/CD Pipelines", "Model Versioning", "Data Pipelines",
+        ],
         "Databases": ["MySQL", "PostgreSQL", "MongoDB"],
         "Data & Visualization": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
-        "Tools & Platforms": ["Git", "GitHub", "Groq Cloud", "Gradio", "Whisper", "gTTS"],
+        "Tools & Platforms": [
+            "Git", "GitHub", "Groq Cloud", "Gradio",
+            "Whisper", "gTTS", "OpenAI API",
+        ],
     },
     "projects": [
+        {
+            "name": "AI Job Hunter Agent (Autonomous Job Application System)",
+            "description": (
+                "Built a fully autonomous AI agent using LangGraph and LangChain that discovers, "
+                "scores, and applies to ML/GenAI/Agentic AI jobs 24/7 without human intervention. "
+                "Engineered a 6-node LangGraph state machine covering job discovery (LinkedIn, Indeed, "
+                "Internshala, Wellfound), relevance scoring with semantic embeddings, ATS resume "
+                "optimization, cover letter generation via OpenAI GPT-4o, and multi-platform tracking "
+                "(Google Sheets, Notion, CSV). Integrated Telegram bot for real-time job alerts."
+            ),
+            "tech": [
+                "LangGraph", "LangChain", "OpenAI GPT-4o", "Python",
+                "BeautifulSoup", "Telegram Bot API", "Google Sheets API",
+                "Notion API", "Sentence Transformers", "Docker",
+            ],
+            "metrics": [
+                "6-node autonomous LangGraph pipeline",
+                "4 job sources scraped simultaneously",
+                "Real-time Telegram notifications",
+                "Runs 24/7 on cloud",
+            ],
+        },
         {
             "name": "Multimodal AI Doctor Assistant (Vision + Voice + LLM)",
             "description": (
@@ -60,7 +104,11 @@ BASE_RESUME = {
                 "Developed a Gradio-based interface with safety-focused prompting."
             ),
             "tech": ["LLaMA", "Whisper", "gTTS", "Gradio", "PyTorch", "Hugging Face"],
-            "metrics": ["Multimodal input (vision + voice)", "Safety-focused prompting", "Live Demo deployed"],
+            "metrics": [
+                "Multimodal input (vision + voice)",
+                "Safety-focused prompting",
+                "Live Demo deployed",
+            ],
         },
         {
             "name": "LLM Fine-Tuning Pipeline (LoRA / QLoRA)",
@@ -71,7 +119,11 @@ BASE_RESUME = {
                 "Evaluated base vs fine-tuned models on unseen reasoning tasks."
             ),
             "tech": ["LLaMA", "LoRA", "QLoRA", "PyTorch", "Hugging Face"],
-            "metrics": ["Parameter-efficient fine-tuning", "Mathematical reasoning dataset", "Improved performance on unseen tasks"],
+            "metrics": [
+                "Parameter-efficient fine-tuning",
+                "Mathematical reasoning dataset",
+                "Improved performance on unseen tasks",
+            ],
         },
         {
             "name": "Agentic AI Coder Buddy (Lovable-like Application)",
@@ -82,7 +134,11 @@ BASE_RESUME = {
                 "Integrated LangChain tools with GPT-OSS models on Groq Cloud for low-latency inference."
             ),
             "tech": ["LangChain", "LangGraph", "GPT-OSS", "Groq Cloud", "Python"],
-            "metrics": ["Full web app generation from prompts", "Low-latency inference via Groq", "Autonomous multi-step reasoning"],
+            "metrics": [
+                "Full web app generation from prompts",
+                "Low-latency inference via Groq",
+                "Autonomous multi-step reasoning",
+            ],
         },
     ],
     "education": [
@@ -105,6 +161,18 @@ BASE_RESUME = {
         "Team Head for DIP project, leading planning, task allocation, and execution",
         "Public Relation Team Lead — E-Summit, IIIT Nagpur (Feb 2026)",
         "Core Member — E-Cell, IIIT Nagpur (Oct 2024 – Aug 2026)",
+    ],
+    "extracurricular": [
+        {
+            "role": "Core Member",
+            "organization": "E-Cell, IIIT Nagpur",
+            "duration": "Oct 2024 – Aug 2026",
+        },
+        {
+            "role": "Public Relation Team Lead",
+            "organization": "E-Summit, IIIT Nagpur",
+            "duration": "Feb 2026",
+        },
     ],
 }
 

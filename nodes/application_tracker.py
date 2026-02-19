@@ -82,22 +82,35 @@ def save_to_csv(records: List[ApplicationRecord], jobs: List[JobListing]) -> str
 # ─────────────────────────────────────────────
 
 def sync_to_google_sheets(records: List[ApplicationRecord], jobs: List[JobListing]):
-    """Sync application tracker to Google Sheets"""
-    if not GOOGLE_SHEET_ID or not os.path.exists(GOOGLE_SHEETS_CREDS):
-        logger.warning("Google Sheets not configured. Skipping.")
+    """Sync application tracker to Google Sheets — works on local + Railway"""
+    if not GOOGLE_SHEET_ID:
+        logger.warning("GOOGLE_SHEET_ID not set. Skipping Google Sheets.")
         return
 
     try:
         import gspread
         from google.oauth2.service_account import Credentials
+        from utils.gcp_auth import get_google_credentials
+
+        creds_path = get_google_credentials()
+        if not creds_path:
+            logger.warning("Google credentials not found. Skipping Sheets sync.")
+            return
 
         scopes = [
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/drive",
         ]
-        creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDS, scopes=scopes)
+        creds = Credentials.from_service_account_file(creds_path, scopes=scopes)
         client = gspread.authorize(creds)
-        sheet = client.open_by_key(GOOGLE_SHEET_ID).worksheet("Applications")
+
+        # Try to get existing sheet or create it
+        try:
+            sheet = client.open_by_key(GOOGLE_SHEET_ID).worksheet("Applications")
+        except Exception:
+            spreadsheet = client.open_by_key(GOOGLE_SHEET_ID)
+            sheet = spreadsheet.add_worksheet("Applications", rows=1000, cols=20)
+            sheet.append_row(TRACKER_COLUMNS)
 
         job_map = {j.job_id: j for j in jobs}
 

@@ -1,7 +1,6 @@
 # ── Secret Files ──────────────────────────────
 .env
 credentials.json
-*.json
 
 # ── Python ────────────────────────────────────
 __pycache__/
